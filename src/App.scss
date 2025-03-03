@@ -1,0 +1,383 @@
+$app-backgroud-color: #304571;
+$white: #ffffff;
+$black: #000000;
+$pink-color: #ff70d9;
+$font-family: "Lato", sans-serif;
+$yellow-color: #ebff00;
+
+.App {
+  background: $app-backgroud-color;
+  font-family: $font-family;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $black;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  &__logo {
+    display: flex;
+    height: 35px;
+  }
+
+  &__text {
+    font-size: 32px;
+    font-weight: bold;
+    color: $pink-color;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: center;
+  z-index: 1000;
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      background: linear-gradient(to right, #ebff00, #ff70d9);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+}
+
+.cart {
+  display: block;
+
+  &__img {
+    height: 30px;
+
+    &:hover {
+      content: url("/assets/images/Busket_hovered.svg");
+    }
+  }
+}
+
+.burger-menu {
+  display: none;
+}
+
+@media (max-width: 360px) {
+  .nav {
+    display: none;
+
+    &--open {
+      display: flex;
+      flex-direction: column;
+      background-color: $black;
+      position: absolute;
+      gap: 1rem;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+
+    &__link {
+      font-size: 1.2rem;
+    }
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
+
+// banner
+.banner {
+  display: flex;
+  align-items: center;
+  background: url("/assets/images/Banner-background.webp") no-repeat center
+    center;
+  background-size: cover;
+  height: 50vh;
+  padding: 32px;
+  color: $white;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+
+  &__content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    position: relative;
+    text-align: left;
+  }
+
+  &__title {
+    width: 600px;
+    font-size: 72px;
+    font-weight: bold;
+    margin: 0;
+
+    &__highlight {
+      color: $pink-color;
+    }
+  }
+
+  &__description {
+    font-size: 32px;
+    margin: 10px 0;
+
+    &__highlight {
+      color: $yellow-color;
+    }
+  }
+
+  &__btn {
+    background-color: $yellow-color;
+    padding: 0.7em 2.2em;
+    margin: 8px 0;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $black;
+    border-radius: 100px;
+
+    &:hover {
+      background-color: rgba($yellow-color, 0.6);
+    }
+  }
+
+  &__rocket {
+    padding-right: 100px;
+  }
+
+  @media (max-width: 768px) {
+    .banner__title {
+      width: 500px;
+      font-size: 48px;
+    }
+
+    .banner__description {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    .banner__content {
+      align-items: center;
+    }
+
+    .banner__title {
+      text-align: center;
+      width: 100%;
+      font-size: 36px;
+    }
+
+    .banner__description {
+      font-size: 16px;
+    }
+
+    .banner__btn {
+      font-size: 16px;
+    }
+
+    .banner__rocket {
+      padding-right: 0;
+      order: -1;
+    }
+  }
+}
+
+// main
+.offers {
+  padding: 32px;
+  color: $white;
+
+  &__title {
+    margin-bottom: 32px;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 16px;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover;
+    background-position: center;
+    padding: 16px;
+    border-radius: 8px;
+
+    &--full-width {
+      grid-column: span 2;
+    }
+
+    &-title {
+      margin: 16px;
+      max-width: 70%;
+      font-size: 74px;
+      font-weight: 800;
+    }
+
+    &-description {
+      font-size: 26px;
+      font-weight: 800;
+      margin: 0 16px;
+    }
+
+    &-btn {
+      background-color: transparent;
+      color: $yellow-color;
+      border: 2px solid $yellow-color;
+      padding: 0.7em 2.2em;
+      margin: 16px;
+      font-size: 22px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 100px;
+      display: inline-block;
+      text-align: center;
+      max-width: 200px;
+      width: 40%;
+
+      &:hover {
+        color: rgba($yellow-color, 0.6);
+        border-color: rgba($yellow-color, 0.6);
+      }
+    }
+  }
+
+  &__description-section {
+    margin-top: 50px;
+    border-radius: 8px;
+  }
+
+  &__description-title {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 800;
+  }
+
+  &__description-text {
+    font-size: 20px;
+    color: rgb($white, 0.6);
+  }
+
+  &__description-btn {
+    background-color: transparent;
+    color: $yellow-color;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: rgba($yellow-color, 0.6);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .offers__card {
+      &-title {
+        width: 100%;
+        font-size: 40px;
+      }
+
+      &-description {
+        font-size: 16px;
+      }
+
+      &--full-width {
+        grid-column: span 1;
+      }
+
+      &-btn {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .offers__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .offers__card {
+      &-title {
+        max-width: 100%;
+        font-size: 40px;
+      }
+
+      &-description {
+        font-size: 16px;
+      }
+
+      &-btn {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.offers__card:nth-child(2),
+.offers__card:nth-child(3) {
+  .offers__card-title {
+    font-size: 46px;
+
+    @media (max-width: 360px) {
+      font-size: 40px;
+    }
+  }
+
+  .offers__card-description {
+    font-size: 24px;
+
+    @media (max-width: 360px) {
+      font-size: 16px;
+    }
+  }
+}
+
+// footer
+.footer {
+  background-color: $black;
+  color: $yellow-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  text-align: center;
+
+  &__text {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+  }
+
+  &__icon {
+    width: 80px;
+    height: auto;
+  }
+}
