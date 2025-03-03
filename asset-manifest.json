@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/space-app/static/css/main.f4981069.css",
+    "main.js": "/space-app/static/js/main.b06596db.js",
+    "static/media/Banner-background.webp": "/space-app/static/media/Banner-background.3c61546f06771a8f84df.webp",
+    "static/media/rocket_icon.svg": "/space-app/static/media/rocket_icon.bf2dbb7c0c33ada062ba83af3725edbe.svg",
+    "static/media/offerBg4.webp": "/space-app/static/media/offerBg4.5c587264f7c53d45f94b.webp",
+    "static/media/offerBg3.webp": "/space-app/static/media/offerBg3.6f85cf16b8699fe10a61.webp",
+    "static/media/offerBg2.webp": "/space-app/static/media/offerBg2.ff782e48ca1b4a986513.webp",
+    "static/media/offerBg1.webp": "/space-app/static/media/offerBg1.85e2fa9f5d63c2a9f75f.webp",
+    "static/media/EARTH.webp": "/space-app/static/media/EARTH.28df645210c464bc3574.webp",
+    "static/media/LOGO.svg": "/space-app/static/media/LOGO.abb7e9ca6e1d2224fa9253c60ef4cfb6.svg",
+    "static/media/Busket_hovered.svg": "/space-app/static/media/Busket_hovered.130703b7b0cf9871648f.svg",
+    "static/media/Busket.svg": "/space-app/static/media/Busket.5fdc8f10c95015c32240615c1ad34fbf.svg",
+    "static/media/menu.svg": "/space-app/static/media/menu.7e65dcdbfcb4fb7f60ea90f61a0ab5f8.svg",
+    "static/media/menu close.svg": "/space-app/static/media/menu close.60d4f41347544050a7b9d2915be4e499.svg",
+    "index.html": "/space-app/index.html",
+    "main.f4981069.css.map": "/space-app/static/css/main.f4981069.css.map",
+    "main.b06596db.js.map": "/space-app/static/js/main.b06596db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f4981069.css",
+    "static/js/main.b06596db.js"
+  ]
+}
